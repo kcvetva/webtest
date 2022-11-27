@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Law News</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<header>    
+    <div id="logo" onclick="slowScroll('#top')">
+        <span>Law News</span>
+    </div>
+    <div id="about">
+        <a href="#" title="What's new on likumi.lv" onclick="slowScroll('#main')">What's new</a>
+        <a href="#" onclick="slowScroll('#blog')" title="Blog">Blog</a>
+        <a href="#" onclick="slowScroll('#contacts')" title="Contacts">Contacts</a>
+        <a href="#" onclick="slowScroll('#FAQ')" title="Frequently Asked Questions">FAQ</a>
+    </div>
+</header>
+
+<div id="top">
+    <h1>Everyone has the right</h1>
+    <h3>to know their rights!</h3>
+</div>
+
+<div id="main">
+    <div class="intro">
+    <h2>Let's get rid of trouble</h2>
+    <span>Be the first to learn about changes in legislation</span>
+    </div>
+    <div class="text">
+     <span>Impossibilium nulla est obligatio. ullum crimen sine poena, nulla poena sine lege, nullum crimen sine poena legāli. Quod non licet femĭnis, aeque non licet viris. Ultra posse nemo obligātur.</span>
+        </div>
+</div>
+
+<div id="overview">
+    <h2>All news about law</h2>
+    <h4>Everything is easier with us</h4>
+
+    <div class="img">
+        <img src="https://images.pexels.com/photos/8731039/pexels-photo-8731039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <span>News from likumi.lv</span>
+    </div>
+    <div class="img">
+        <img src="https://images.pexels.com/photos/5668484/pexels-photo-5668484.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+        <span>Judicature News</span>
+    </div>
+</div>
+
+<div id="contacts">
+    <center><h5>Feedback</h5></center>
+    <form id="form_input">
+        <label for="name">Name <span>*</span></label><br>
+        <input type="text" placeholder="Type your Name" name="name" id="name"><br>
+        <label for="email">E-mail <span>*</span></label><br>
+        <input type="email" placeholder="Type your E-mail" name="email" id="email"><br>
+        <label for="message">Feedback <span>*</span></label><br>
+        <textarea placeholder="Type your message" name="message" id="message"></textarea><br>
+        <div id="mess_send" class="btn">Send</div>
+    </form>
+</div>
+
+<div id="faq">
+    <div>
+        <span class="title">Information</span><br>
+        <span class="heading">What is included in the services?</span>
+        <p>We provide you with the most up-to-date information on changes in Latvian legislation in the most accessible language, so that you do not have to understand difficult legal terminology yourself.</p>
+    </div>
+    <div>
+        <span class="title">PRO version</span><br>
+        <span class="heading">Why should I buy PRO version?</span>
+        <p>Our PRO version gives you possibility to use Blog, where you can discuss everything with adherents. You also get the opportunity to contact us with a request to explain a specific article in any law, and we, in turn, will publish it in the private zone on the site.</p>
+    </div>
+    <div>
+        <span class="title">Reliability</span><br>
+        <span class="heading">Can I trust your content on the site?</span>
+        <p>We take all information from reliable sources (likumi.lv, Latvijas vēstnesis, jurisdiction of the court, etc.), and all our article writers are qualified lawyers with at least 5 years of experience.</p>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+    function slowScroll(id) {
+        $('html, body').animate({
+            scrollTop: $(id).offset().top
+        }, 500);
+    }
+
+    $(document).on("scroll", function () {
+        if($(window).scrollTop() === 0)
+        $("header").removeClass("fixed");
+        else
+        $("header").attr("class", "fixed")
+    });
+</script>
+</body>
+</html>
